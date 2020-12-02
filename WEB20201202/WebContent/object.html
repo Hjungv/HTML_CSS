@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// 비어있는 객체를 만들고 거기에 하나씩 추가
+	var tv = new Object(); // var tv = {}; 위와 같음
+	tv.color = "white"; //없는 속성은 만들어지면서 대입할 수 있음
+	tv.price = 300000;
+	tv.info = function(){
+		document.write("tv 색상 : " + this.color, "<br>");
+		document.write("tv 가격 : " + this.price, "<br>");
+	}
+	// 객체를 가진 상태로 만듬
+	var car = {
+		color : "black",
+		price : 5000000,
+		info : function(){
+			document.write("car 색상: "+this.color, "<br>");
+			document.write("car 가격: "+this.price, "<br>");
+		}
+	};
+
+	document.write("<h1>tv 객체 메서드 호출</h1>");
+	tv.info();
+	document.write("<h1>car 객체 메서드 호출</h1>");
+	car.info();
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
