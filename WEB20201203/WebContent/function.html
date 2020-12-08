@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* myFnc();
+
+// 매개변수가 없는 myFnc라는 함수
+function myFnc(){
+	document.write("hello","<br>");
+	document.write("welcome","<br>");
+}
+
+var testFnc = function(){
+	document.write("hello","<br>");
+	document.write("javascript","<br>");
+}
+
+myFnc(); */
+
+var color = ["white","yellow","aqua","purple"];
+
+var i = 0;
+function changeColor(){
+	i++;
+	if(i>=color.length){
+	i = 0;
+	}
+
+	//Id가 theBody인 애를 객체로 가져와서 bodyTag에 담아라
+	var bodyTag = document.getElementById("theBody");
+	bodyTag.style.backgroundColor = color[i];
+}
+
+//함수안에서 사용될 변수명칭을 매개변수 자리에 적음
+function myFnc(name,area){
+	document.write("안녕하세요 "+ name +"입니다.", "<br>");
+	return area;
+	document.write("사는 곳은 "+ area +"입니다", "<br>");
+}
+
+var a = myFnc("홍당무","서울");
+var b = myFnc("깍두기","부산");
+
+alert(a + "|" + b);
+
+
+</script>
+</head>
+<body id="theBody">
+	<input type="button" onclick="changeColor();" value="배경색 바꾸기">
+
+</body>
+</html>
