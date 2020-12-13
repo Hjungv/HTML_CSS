@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+function formCheck(){
+	var id = documentgetElementById("id").value;
+	var pw = document.getElementById("pw").value;
+
+}
+
+	var count = 0;
+	for(var i=0; i<food.length; i++){
+		if(food[i].checked){
+			count++;
+		}
+	}
+
+function checkboxValidation(array,num,str){
+	var count = 0;
+	for(var i=0; i<array.length; i++){
+		if(array[i].checked){
+			count++;
+		}
+	}
+
+	if(count<num){
+		alert("종아하는 " + str + "은(는) "+ num + "개 이상 선택해 주세요");
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+	<form action="서버로 전달될 경로" onsubmit="return formCheck();">
+		ID : <input type="text" id="id" value="guest"> <br>
+		PW : <input type="password" id="pw"><br>
+		비밀번호 확인 : <input type="password" id="pwcheck"> <br>
+		1번째 그룹 (좋아하는 야식) <br>
+		치킨<input type="checkbox" name="food">
+	</form>
+</body>
+</html>

@@ -1,9 +1,11 @@
 
 document.write("책에\" 자바스크립트는 대소문자를 구분해야 합니다.\"라고 나와있다</br>");
+
 var box;
 box = 100;
 box = 30;
 document.write(box);
+
 var tag = "<h1>tag</h1>";
 document.write(tag);
 
